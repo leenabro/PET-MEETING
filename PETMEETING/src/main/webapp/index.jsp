@@ -1,7 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <jsp:include page="/views/common/header.jsp" />
+<c:set var="path" value="${ pageContext.request.contextPath }" />
+
+<style>
+	.card-text {
+		text-decoration: none;
+		color: black;
+	}
+</style>
+
+
 
 <%-- 부트스트랩 '회전목마'테마 --%>
      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -27,24 +39,26 @@
      </div>
 
  <section id="content">
- 	    <div class="card" style="width: 55rem;" id="search">
-                    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbC3VYr%2FbtrZJ2Z3j7e%2FTMsy0kgAAyW2IG1k9Bfgl0%2Fimg.png" class="card-img-top" alt="…">
-                    <div class="card-body">
-                        <p class="card-text" id="serch">친구찾기</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 55rem;" id="map">
-                    <img src="https://cdn.pixabay.com/photo/2022/10/11/03/40/borador-7513186_1280.jpg" class="card-img-top" alt="…">
-                    <div class="card-body">
-                        <p class="card-text" id="serch">산책지도</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 55rem;" id="petdiary">
-                    <img src="https://cdn.pixabay.com/photo/2022/05/30/14/05/paw-7231300_1280.jpg" class="card-img-top" alt="…">
-                    <div class="card-body">
-                        <p class="card-text" id="serch">펫다이어리</p>
-                    </div>
-                </div>
+	<div class="card" style="width: 55rem;" id="search">
+		<a href="${ path }/walkBoard/search">
+			<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbC3VYr%2FbtrZJ2Z3j7e%2FTMsy0kgAAyW2IG1k9Bfgl0%2Fimg.png" class="card-img-top" alt="…">
+		</a>
+		<div class="card-body">
+			<a class="card-text" id="serch" href="${ path }/walkBoard/search">친구찾기</a>
+		</div>
+	</div>
+	<div class="card" style="width: 55rem;" id="map">
+		<img src="https://cdn.pixabay.com/photo/2022/10/11/03/40/borador-7513186_1280.jpg" class="card-img-top" alt="…">
+		<div class="card-body">
+			<a class="card-text" id="serch">산책지도</a>
+		</div>
+	</div>
+	<div class="card" style="width: 55rem;" id="petdiary">
+		<img src="https://cdn.pixabay.com/photo/2022/05/30/14/05/paw-7231300_1280.jpg" class="card-img-top" alt="…">
+		<div class="card-body">
+			<a class="card-text" id="serch">펫다이어리</a>
+		</div>
+	</div>
  </section>
 
 <jsp:include page="/views/common/footer.jsp" />

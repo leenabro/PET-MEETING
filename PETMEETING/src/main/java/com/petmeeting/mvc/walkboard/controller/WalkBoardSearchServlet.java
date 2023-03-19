@@ -16,6 +16,6 @@ public class WalkBoardSearchServlet extends HttpServlet {
 
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/walkboard/search.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/walkboard/walksearch.jsp").forward(request, response);
 	}
 }
