@@ -1,0 +1,101 @@
+nav {
+    margin-top: 2px;
+    height: 40px;
+    background-color: dodgerblue;
+}
+
+#memberInfoTable {
+    height: 250px;
+}
+
+#memberInfoTable tr td {
+    padding-left: 20px;
+}
+
+
+#member_info {
+    border: 1px solid;
+    margin-top: 2px;
+    height: 300px;
+}
+
+#dog_info {
+    border: 1px solid;
+    margin-top: 5px;
+    height: 900px;
+}
+
+article>h3 {
+    text-align: center;
+}
+
+/* 탭 메뉴 css */
+body{
+    margin-top: 100px;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+ul.tabs li.current{
+    background: #ededed;
+    color: #222;
+}
+
+#tab_title1, #tab_title2, #tab_title3 , #tab_title4, #tab_title5{
+    display: none;
+}
+
+.tab-content{
+    display: none;
+    background: #ededed;
+    padding: 15px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+/* 강아지 탭 안에 들어가는 정보 css*/
+.form-control {
+    width: 95%;
+    margin: 5px 10px 8px 0px;
+    font-size: 1.5em;
+    border: solid 1px #dadada;
+    background: #fff;
+}
+
+#dog_infos>div>img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+select{
+    width:95%;
+    height:30px;
+    margin: 5px 10px 8px 0px;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+}
+
+

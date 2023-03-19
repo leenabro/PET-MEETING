@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recommend walk board</title>
+
+    <!-- 부트스트랩 링크 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <!-- 내가 생성한 파일 연결 -->
+    <script src="../js/jquery-3.6.3.js"></script>
+    <link rel="stylesheet" href="./recoboard.css">
+
+</head>
+<body>
+    <header>
+        <nav  id="nav1" class="navbar bg-light">
+            <div class="container-fluid">
+                <div class="login-container">
+                    <c:if test="${ empty loginMember }">
+                        <div>
+                            <img src="https://cdn.pixabay.com/photo/2012/05/07/13/46/foot-48503__340.png" alt="" id="logoimg">
+                        </div>
+                            <button type="button" id="si" class="btn btn-outline-secondary">회원가입</button>
+                            <button type="button" id="so"  class="btn btn-outline-secondary">로그인</button>             
+                    </c:if>
+                    </div>
+                </div>
+        </nav>
+        <div style="text-align: right; padding: 3px">
+            <button id="btnMyPage">마이페이지로 이동</button>
+        </div>
+        
+        <div id="title">
+                PET MEETING
+        </div>   
+        
+        <div id="addimg">
+        </div> 
+                    <c:if test="${ not empty loginMember }">
+                        <table>
+                            <tr>
+                                <td colspan="2">
+                                    ${ loginMember.name }님 안녕하세요.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button onclick="location.href='${ path }/member/myPage'">내 정보</button>
+                                </td>
+                                <td>
+                                    <button onclick="location.replace('${ path }/logout')">로그아웃</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </c:if>
+                    
+                    
+                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group" id="fixed" >
+                        <button type="button" class="btn btn-primary" style="height: 150px; margin-bottom: 10px; border-bottom-left-radius: 0.375rem; border-bottom-right-radius: 0.375rem;">산책가기</button>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="height: 150px; border-top-left-radius: 0.375rem; border-top-right-radius: 0.375rem;">게시판</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">펫다이어리</a></li>
+                                <li><a class="dropdown-item" href="#">펫미팅 후기</a></li>
+                                <li><a class="dropdown-item" href="#">정보 공유</a></li>
+                                <li><a class="dropdown-item" href="#">문의하기</a></li>
+                                <li><a class="dropdown-item" href="#">공지사항</a></li>
+                                <li><a class="dropdown-item" href="#">신고하기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    </header>	
+    <nav>
+
+    </nav>
+    <section id="recoWalkBoard">
+        <article>
+            <div id="firstDiv" class="item active">
+                <h2 style="text-align: center; margin-top: 10px;">마포구 하늘공원 메타세콰이어길</h2>
+                <br>
+                <div id="mainimg">
+                    <img src="../resouce/mainimg.png">
+                </div>
+                <br>
+                <p style="margin-left: 10%;" class="recoPtag">
+                    하늘공원의 한강 변 쪽으로 위치한 메타세콰이어길은 총길이 900m의 산책로로 하늘공원의 다른 산책로보다 <br>
+                    유동 인구가 적은 편이라 반려견 동반이 훨씬 수월한 길이다. <br>
+                    특히 가을에 단풍이 들면 무척 아름다운 절경을 볼 수 있는 가을 단풍길이라고도 불리고 있다. <br>
+                    그뿐만 아니라 월드컵공원 반려견 놀이터에서 충분한 시간을 즐기고, 산책과 더불어 하늘공원에 오르는 계단부터 <br>
+                    맹꽁이버스까지 댕댕이와 다양한 체험을 같이 할 수 있는 코스이기도 하다. <br>
+                </p>
+
+                <div id="container"></div>
+                <div id="imgs">
+                    <div><img src="../resouce/subimg1.png" class="slideimg"></div> &nbsp;
+                    <div><img src="../resouce/subimg2.png" class="slideimg"></div> &nbsp;
+                    <div><img src="../resouce/subimg3.png" class="slideimg"></div>
+                </div>
+                
+            </div>
+            <div id="firstDiv" class="item">
+                <h2 style="text-align: center; margin-top: 10px;">도봉구 초안산 도봉 둘레길</h2>
+                <br>
+                <div id="mainimg">
+                    <img src="../resouce/mainimg2.png">
+                </div>
+                <br>
+                <p style="margin-left: 10%;" class="recoPtag">
+                    도봉구 초안산근린공원에 마련된 도봉구 반려견놀이터를 시작으로 인근에 형성된 초안산 도봉 둘레길, <br>
+                    그리고 초안산 나들길을 산책하는 코스로 비교적 낮은 산에 산림욕을 즐기며 초안산 도봉 둘레길 4.2km 구간이나 <br>
+                    초안산나들길 4.4km 구간을 반려견 및 반려견주의 기분과 체력에 따라 선택하며 즐길 수 있는 코스이다. <br>
+                    특히 봄에는 초안산 인근 우이천 길을 걸으면 흐드러진 벚꽃 속에서 봄을 온몸으로 맞이할 수 있다. <br>
+                </p>
+
+                <div id="container"></div>
+                <div id="imgs">
+                    <div><img src="../resouce/subimg2-1.png" class="slideimg"></div> &nbsp;
+                    <div><img src="../resouce/subimg2-2.png" class="slideimg"></div> &nbsp;
+                    <div><img src="../resouce/subimg2-3.png" class="slideimg"></div>
+                </div>
+                
+            </div>
+            <div id="firstDiv" class="item">
+                <h2 style="text-align: center; margin-top: 10px;">동작구 보라매공원 둘레길</h2>
+                <br>
+                <div id="mainimg">
+                    <img src="../resouce/mainimg3.png">
+                </div>
+                <br>
+                <p style="margin-left: 10%;" class="recoPtag">
+                    댕댕이와 함께 걷는 산책코스 중 손에 꼽는 아스팔트로 된 지역이다. <br>
+                    물론 보라매공원 내에 반려견 놀이터와 흙길 및 잔디밭이 펼쳐진 구역이 있지만 많이 번잡하지 않으며 유유자적하게 일정 시간 동안 걸을 수 있는 지역이다. <br>
+                    그뿐만 아니라 공원 내의 연못길을 따라 한 바퀴 돌며 산책할 수 있는 구역도 조성되어 있으며, 봄과 여름에는 공원 내 중앙잔디광장과 음악분수 등에서 <br>
+                    다양한 이벤트도 진행되니 동작구 인근의 반려인이라면 댕댕이와 함께 충분히 가볼 만한 코스이다.
+                </p>
+
+                <div id="container"></div>
+                <div id="imgs">
+                    <div><img src="../resouce/subimg3-1.png" class="slideimg"></div> &nbsp; 
+                    <div><img src="../resouce/subimg3-2.png" class="slideimg"></div> &nbsp;
+                    <div><img src="../resouce/subimg3-3.png" class="slideimg"></div>
+                </div>
+                
+            </div>
+            <div>
+                <button class="prev" id="prev">이전</button>
+            </div>
+            <div>
+                <button class="next" id="next">다음</button>
+            </div>
+            <div id="lastDiv" class="mainDiv">
+
+            </div>
+        </article>
+    </section>
+    <footer>
+        <ul>
+            <li>Copyright ©2023 Pet Meeting</li>
+            <li>강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F
+            </li>
+        </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            let curPos = 0; // 현재 보이는 요소의 인덱스 번호
+
+            function prev(){
+                if(curPos > 0){
+                $("button").removeAttr("disabled") // 모든 버튼 사용할 수 있게!
+                // toggleClass : 클래스가 있으면 제거, 없으면 생성!
+                $($(".item")[curPos]).toggleClass("active")
+                $(".item").hide();
+                curPos -= 1;
+                $($(".item")[curPos]).toggleClass("active")
+                $(".active").fadeIn(800); // 새로운 액티브 요소만 스르륵 나타난다
+                }           
+                if(curPos == 0){
+                $(".prev")[0].setAttribute("disabled",'true')
+                }
+            }       
+
+            function next(){
+                if(curPos < 2){
+                    $("button").removeAttr("disabled")
+                    $($(".item")[curPos]).toggleClass("active")
+                    $(".item").hide();
+                    curPos += 1;
+                    $($(".item")[curPos]).toggleClass("active")
+                    $(".active").fadeIn(800); 
+                    }
+                if(curPos == 2){
+                    $(".next")[0].setAttribute("disabled",'true')
+                }
+            }
+
+            function init(){
+            $(".item").hide()
+            $(".active").show()
+            $(".prev").click(prev)
+            $(".next").click(next)
+            }
+
+            init();
+            
+        });
+
+    </script>
+
+</body>
+</html>

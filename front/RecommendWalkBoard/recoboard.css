@@ -1,0 +1,181 @@
+
+body{
+    margin: 0px;
+}
+
+#logoimg{
+    height: 50px;
+    margin: auto;
+}
+/*상단 하얀부분*/
+#nav1{
+    height: 65px;
+}
+
+
+/*회원가입, 로그인 버튼*/
+#si {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: rgb(12, 66, 12);
+    font-family: 'Jua', sans-serif;
+}
+#so{
+    position: absolute;
+    top: 15px;
+    right: 120px;
+    color: rgb(12, 66, 12);
+    font-family: 'Jua', sans-serif;
+}
+
+header{
+    background-color: blanchedalmond;
+    height: 15%;
+}
+/*title*/
+#title{
+    font-size: 7em;
+    margin: auto;
+    text-align: center;
+    color: rgb(12, 66, 12);
+    font-family: 'Jua', sans-serif;
+}
+
+
+
+/* section메인내용*/
+#addimg{
+    height: 400px;
+    background: url("https://cdn.pixabay.com/photo/2015/12/13/07/31/new-years-day-1090770_960_720.jpg") fixed; 
+}
+
+#fixed{
+    font-family: 'Jua', sans-serif;
+    position: fixed;
+    /* position: sticky; */
+    top: 400px;
+    right: 20px;
+    width: 150px;
+    font-size: 1.5em;
+    text-align: center;
+    opacity: 0.5;
+    z-index: 9999;
+}
+
+#carouselExampleAutoplaying{
+    margin: auto;
+    margin-top: 100px;
+    width: 65%;
+    margin-bottom: 200px;
+}
+
+#search, #map, #petdiary{
+    text-align: center;
+    color: rgb(12, 66, 12);
+    font-family: 'Jua', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 100px;
+    background-color: blanchedalmond;
+}
+
+#search, #petdiary{
+    margin-left: 10%;
+}
+
+#map{
+    margin-left: 57%;
+}
+
+footer{
+    margin-top: 300px;    
+    background-color: blanchedalmond;
+    height: 300px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 8%;
+    text-align: center;
+    color: rgb(12, 66, 12);
+    font-family: 'Jua', sans-serif;
+}
+
+/* Recommend Walk Board CSS */
+.mainDiv {
+    display: inline-block;
+    /* border 삭제하기 */
+
+}
+
+#firstDiv {
+    width: 80%;
+    margin-right: 20px;
+    float: left;
+}
+
+#lastDiv {
+    border: 1px solid;
+    width: 10%;
+    text-align: right;
+    float: right;
+    height: 100%;
+}
+
+#mainimg {
+    text-align: center;
+}
+
+footer {
+    clear:left;
+}
+/* Recommend Walk Board img CSS */
+#container {
+    display: relative;
+}
+
+#imgs{
+    height: 400px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    overflow: scroll;
+
+}
+
+.item{
+    height: auto;
+    margin-top: 10px;
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+    background-color: rgb(255, 249, 239);
+}
+
+.active{
+    display: inline-block;
+}
+
+#prev, #prev:active, #prev:focus{
+    top: 45%;
+    transform: translateY(-50%);
+    width: 50px; height: 20px;
+    border: none; background-color: blanchedalmond; outline: none;
+    float: left;
+    clear: left;
+}
+#next, #next:active, #next:focus{
+    top: 45%;
+    transform: translateY(-50%);
+    width: 50px; height: 20px;
+    border: none; background-color: blanchedalmond; outline: none;
+    float: right;
+    clear: right;
+    margin-right: 20%;
+
+}
+
+
+.recoPtag {
+    clear: both;
+}
