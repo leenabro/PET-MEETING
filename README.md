@@ -8,6 +8,7 @@
 * 개발 환경
 
 <div align= center>
+  
 |제목|내용|
 |-----|----|
 |운영체제|Window OS, MacOS|
@@ -16,6 +17,7 @@
 |Server|Apache Tomcat 9.0|
 |Language|Java 11, JavaScript|
 |디자인툴|Bootstrap|
+  
 </div>
 
 * 프로젝트 시 활용해본 대표 기술: Java11, JavaScript, SqlDevleoper
