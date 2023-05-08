@@ -7,7 +7,9 @@
 
 * 개발 환경
 
-| 운영체제 | 내용 |
+|제목|내용|
+|-----|----|
+|운영체제|Window OS, MacOS|
 |개발도구|Eclipse, SqlDeveloper, Visual Studio Code|
 |DBMS|Oracle|
 |Server|Apache Tomcat 9.0|
