@@ -6,7 +6,8 @@
 * 개발 목표: 반려견 가구수와 코로나 사회적 거리두기를 고려하여 반려견 가정의 소통 증가를 위해 강아지의 친구를 찾고 함께 산책하는 것을 돕기 위하여 개발하였습니다.
 
 * 개발 환경
-|운영체제|내용|
+
+| 운영체제 | 내용 |
 |개발도구|Eclipse, SqlDeveloper, Visual Studio Code|
 |DBMS|Oracle|
 |Server|Apache Tomcat 9.0|
